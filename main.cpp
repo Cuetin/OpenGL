@@ -2,7 +2,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "shader.hpp"
+#include "shaders/shader.hpp"
 
 using namespace std;
 
@@ -43,7 +43,7 @@ int main(){
     glBindVertexArray(VertexArrayID);
 
     //Cargamos los shaders
-    GLuint programID = LoadShaders( "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader" );
+    GLuint programID = LoadShaders( "shaders/SimpleVertexShader.vertexshader", "shaders/SimpleFragmentShader.fragmentshader" );
 
     //Declaramos un vector que representa los tres vertices
     static const GLfloat g_vertex_buffer_data[] ={
@@ -89,4 +89,3 @@ int main(){
     //El ShouldClose creo que es para si pulsas la x de la ventana para cerrar
     return 0;
 }
-
